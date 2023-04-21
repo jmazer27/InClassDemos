@@ -327,6 +327,15 @@ template {
 /* =============
     Base
 ============= */
+.header-footer-grid {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". header-footer .";
+}
+.header-footer-grid > div {
+  grid-area: header-footer;
+}
+
 .large-images {
   width: 100%;
 }
@@ -361,15 +370,6 @@ textarea {
 /* =============
     Header
 ============= */
-head {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". header .";
-}
-head > div {
-  grid-area: header;
-}
-
 /* =============
     Footer
 ============= */
@@ -379,9 +379,37 @@ head > div {
 /* =============
    about
 ============= */
+#about {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". about .";
+}
+#about > div {
+  grid-area: about;
+}
+
 /* =============
    partners
 ============= */
+#partners {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". partners .";
+}
+#partners > div {
+  grid-area: partners;
+  border: 1px solid red;
+}
+
 /* =============
    Requests
 ============= */
+#requests {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". requests .";
+}
+#requests > div {
+  grid-area: requests;
+  border: 1px solid purple;
+}
