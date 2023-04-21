@@ -89,7 +89,6 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted; /* 2 */
 }
 
@@ -328,6 +327,10 @@ template {
 /* =============
     Base
 ============= */
+.large-images {
+  width: 100%;
+}
+
 /* =============
     Typography
 ============= */
@@ -358,6 +361,15 @@ textarea {
 /* =============
     Header
 ============= */
+head {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". header .";
+}
+head > div {
+  grid-area: header;
+}
+
 /* =============
     Footer
 ============= */
